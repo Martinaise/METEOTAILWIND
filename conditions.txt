@@ -1,0 +1,9 @@
+emojis : https://emojipedia.org/search/?q=weather
+
+Temperature < 0 ❄️
+temperature > 25 🌡️
+precipitation > 3 🌧️
+precipitation > 1 && < 3 🌤️
+precipitation < 1 ☀️
+windspeed > 25 💨
+
