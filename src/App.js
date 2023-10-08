@@ -3,6 +3,7 @@ import TodayCard from "./components/TodayCard";
 import WeekDayCard from "./components/WeekDayCard";
 import { formatWeatherDataDaily } from "./utils/formatWeatherDataDaily";
 
+
 function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(false);
@@ -69,7 +70,7 @@ function App() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen h-max  bg-cyan-600 flex justify-center items-start p-8 md:px-20">
+      <div className="min-h-screen h-max flex justify-center items-start p-8 md:px-20">
         <p className="text-center">Chargement ...</p>
       </div>
     );
@@ -77,7 +78,7 @@ function App() {
 // si on est en chargement
   if (!isLoading && weatherData.length === 0) {
     return (
-      <div className="min-h-screen h-max  bg-cyan-600 flex justify-center items-start p-8 md:px-20">
+      <div className="min-h-screen h-max   flex justify-center items-start p-8 md:px-20">
         <p className="text-center">
           Aucune données n'a pu être récupérée. Merci de réessayer.
         </p>
@@ -87,7 +88,7 @@ function App() {
 // si jamais il y'a une erreur
   if (error) {
     return (
-      <div className="min-h-screen h-max  bg-cyan-600 flex justify-center items-start p-8 md:px-20">
+      <div className="min-h-screen h-max  flex justify-center items-start p-8 md:px-20">
         <p className="text-red-500 text-center">
           Une erreur est survenue lors de la récupération des prévisions météo
           ...
@@ -97,7 +98,7 @@ function App() {
   }
 // si tou va bien 
   return (
-    <div className="min-h-screen h-max  bg-cyan-600 flex justify-center items-start p-8 md:px-20 ">
+    <div className="min-h-screen h-max  flex justify-center items-start p-8 md:px-20 ">
       <div className="w-full max-w-7xl bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg shadow-lg px-4 py-4 xl:py-12 xl:px-28 md:px-12 md:py-8 ">
       {/* on importe le composant TodayCard */}
         <TodayCard data={weatherData[0]} weatherUnits={weatherUnits} />

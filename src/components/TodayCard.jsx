@@ -21,7 +21,7 @@ const TodayCard = ({ data, weatherUnits }) => {
       data.precipitation_sum,
       data.windspeed_10m_max
     );
-// recup emodji qui represente la météo
+    // recup emodji qui represente la météo
     setWeatherEmojis(weatherEmojis);
   }, [data]);
 
@@ -34,7 +34,8 @@ const TodayCard = ({ data, weatherUnits }) => {
   }
 
   return (
-    <div className="max-w-max xl:ml-auto mx-auto">
+    
+    <div className="max-w-max xl:ml-auto mx-auto bacground_todaycard">
       <div className="flex mb-20 mt-12 flex-col xl:flex-row ">
         <div className="flex flex-col">
           <div className="text-8xl mb-8 text-center xl:text-right ">

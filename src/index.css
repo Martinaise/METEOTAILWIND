@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+    background-image: url("..//src/img/meteo.jpg"); 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+    
+    
+    
